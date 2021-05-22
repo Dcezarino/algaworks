@@ -14,15 +14,14 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @RestController
 public class ClientController {
-	
 
 	@Autowired
 	private ClientRepository clientRepository;
-	
+
 	@GetMapping("/clients")
 	public List<Client> list() {
 
-		return clientRepository.findByNameContaining("João");
+		return clientRepository.findByName("João da Silva");
 	}
 
 }
